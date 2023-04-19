@@ -1,0 +1,6 @@
+@startuml 演習2-2_1
+    actor 経営者
+    actor ホテル従業員
+
+    経営者 --|> ホテル従業員
+@enduml

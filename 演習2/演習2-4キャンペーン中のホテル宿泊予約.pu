@@ -1,0 +1,9 @@
+@startuml 演習2-4
+     actor 利用者
+    rectangle ホテル{
+        usecase (予約\nキャンペーン期間\nキャンペーン) as 予約
+        usecase ログイン
+    }
+    利用者 --> 予約
+    予約 .>ログイン : << include >>
+@enduml

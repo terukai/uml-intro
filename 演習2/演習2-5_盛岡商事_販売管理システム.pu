@@ -1,0 +1,13 @@
+@startuml 
+left to right direction
+actor "田中さん" as tanaka
+actor "鈴木さん" as suzuki
+
+rectangle "販売管理システム" {
+  usecase "注文商品確認" as check_order
+  usecase "商品出荷状況登録" as register_shipment
+}
+
+tanaka --> check_order
+suzuki --> register_shipment
+@enduml
