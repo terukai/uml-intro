@@ -1,0 +1,20 @@
+@startuml 演習4-1_SD_ラーメン屋さんでの注文
+' ; title ログイン認証
+hide footbox
+Actor "<u>客</u>" as user
+participant "<u>:フロア定員</u>" as custmer
+participant "<u>:料理人</u>" as cook
+' participant "会員情報" as entity
+mainframe sd ラーメン屋さん
+activate user
+    user -> custmer: ラーメンを注文
+    activate custmer
+    custmer -> cook: 調理の指示
+        activate cook
+            cook -> cook: 調理をする
+        custmer <- cook:ラーメン
+        deactivate cook
+    user <-- custmer: ラーメン
+    deactivate custmer
+deactivate user
+@enduml
