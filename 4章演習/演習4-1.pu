@@ -1,0 +1,24 @@
+@startuml 4章シーケンス図
+hide footbox
+
+autonumber
+
+skinparam style strictuml
+actor "<u>:客</u>" as custmer
+participant ":<u>:フロア店員</u>" as clerk
+participant ":<u>:料理人</u>" as cook 
+activate custmer
+    custmer -> clerk: ラーメンを注文する
+    activate clerk
+        clerk -> cook: 料理を指示
+        activate cook
+            cook -> cook:調理をする
+        clerk <- cook: ラーメン
+        deactivate cook
+    deactivate clerk
+    custmer <- clerk :ラーメン
+deactivate custmer
+
+
+
+@enduml

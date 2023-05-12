@@ -1,0 +1,15 @@
+@startuml 演習３－４ クラス図
+left to right direction
+class 車 {
+    - ID:int
+    - 車種:String
+    - 車メーカー:String
+}
+class タイヤ {
+    - 種類:String
+    - タイヤメーカー:String
+    - 車ID:int
+}
+
+車 "1"--"*"タイヤ
+@enduml
