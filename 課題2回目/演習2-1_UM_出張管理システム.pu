@@ -1,0 +1,26 @@
+@startuml 演習2-1
+left to right direction
+actor 申請者 
+actor 交通費精算システム
+actor 承認者
+actor 経理担当者
+
+rectangle 出張管理システム {
+    usecase 出張管理を申請する as 申請
+    usecase 出張申請を提供する as 提供
+    usecase 出張申請を承認する as 承認
+    usecase 出張申請を却下する as 却下
+    usecase 出張申請を差し戻す as 差し戻す
+    usecase 出張申請を確認する as 確認
+}
+
+申請者 --> 申請
+申請 <-- 交通費精算システム
+申請者 --> 提供
+承認者 --> 承認
+承認者 --> 却下
+承認者 --> 差し戻す
+承認者 --> 確認
+経理担当者 --> 確認
+
+@enduml
